@@ -4886,7 +4886,7 @@ target		:session/id={id} a :Session ; :id {id} ; :lastActivatedAtTime {last_acti
 source		select * from session
 
 mappingId	NotebookCell
-target		:notebookcell/id={id} a :NotebookCell ; :type {cell_type} ; p-plan:isStepOfPlan :notebook/id={notebook_id} ; :description {source} . 
+target		:notebookcell/id={id} a :Cell ; :type {cell_type} ; p-plan:isStepOfPlan :notebook/id={notebook_id} ; :description {source} . 
 source		select * from cell
 
 mappingId	NotebookOutput

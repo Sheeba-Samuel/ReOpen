@@ -49,6 +49,14 @@ Kathrin Groeneveld</terms:creator>
     
 
 
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#hasKernel -->
+
+    <owl:ObjectProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#hasKernel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://fusion.cs.uni-jena.de/fusion/repr/#hasOriginalFile -->
 
     <owl:ObjectProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#hasOriginalFile">
@@ -85,6 +93,14 @@ Kathrin Groeneveld</terms:creator>
 
     <owl:ObjectProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#hasPlateAcquisition">
         <rdfs:label xml:lang="en">hasPlateAcquisition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#hasProgrammingLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#hasProgrammingLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -135,6 +151,12 @@ Kathrin Groeneveld</terms:creator>
         <rdfs:comment>Relates an entity to its unit.</rdfs:comment>
         <rdfs:label xml:lang="en">hasUnit</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#hasVersion"/>
     
 
 
@@ -569,6 +591,16 @@ Kathrin Groeneveld</terms:creator>
     <owl:DatatypeProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#excitationspectrumfileid">
         <rdfs:comment>The excitation spectrum file.</rdfs:comment>
         <rdfs:label xml:lang="en">Excitation Spectrum File Id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#executionTime -->
+
+    <owl:DatatypeProperty rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#executionTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">The time taken for a run.</rdfs:comment>
+        <rdfs:label xml:lang="en">Execution Time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1882,6 +1914,27 @@ For example, an argument of parameter of a function.</rdfs:comment>
     <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#CanonDNG">
         <rdfs:subClassOf rdf:resource="http://fusion.cs.uni-jena.de/fusion/repr/#SupportedFileFormat"/>
         <rdfs:label xml:lang="en">Canon DNG</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#Cell -->
+
+    <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#Cell">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
+        <rdfs:comment xml:lang="en">A cell is a multiline text input field in an Interactive Notebook which can either be code cells where code can be excuted or markdown cells where a descriptive text can be provided or raw cells where output can directly be entered. 
+For example, a Jupyter Notebook cell.</rdfs:comment>
+        <rdfs:label xml:lang="en">NotebokCell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#CellExecution -->
+
+    <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#CellExecution">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Activity"/>
+        <rdfs:comment xml:lang="en">The run of a cell of a Interactive Notebook.</rdfs:comment>
+        <rdfs:label xml:lang="en">Notebook Cell Execution</rdfs:label>
     </owl:Class>
     
 
@@ -4640,17 +4693,6 @@ For example, Jupyter Notebook</rdfs:comment>
     
 
 
-    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#NotebookCell -->
-
-    <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#NotebookCell">
-        <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Step"/>
-        <rdfs:comment xml:lang="en">A cell is a multiline text input field in an Interactive Notebook which can either be code cells where code can be excuted or markdown cells where a descriptive text can be provided or raw cells where output can directly be entered. 
-For example, a Jupyter Notebook cell.</rdfs:comment>
-        <rdfs:label xml:lang="en">NotebokCell</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://fusion.cs.uni-jena.de/fusion/repr/#Noting -->
 
     <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#Noting">
@@ -6340,6 +6382,14 @@ For example, a chemical solution used in an experiment.</rdfs:comment>
     
 
 
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#Source -->
+
+    <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/net/p-plan#Variable"/>
+    </owl:Class>
+    
+
+
     <!-- http://fusion.cs.uni-jena.de/fusion/repr/#Specimen -->
 
     <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#Specimen">
@@ -6881,6 +6931,14 @@ For example, in OMERO, its the job to upload data to the OMERO server.</rdfs:com
         <rdfs:subClassOf rdf:resource="http://fusion.cs.uni-jena.de/fusion/repr/#ExperimentalData"/>
         <rdfs:comment xml:lang="en">The input used to verify a material.</rdfs:comment>
         <rdfs:label xml:lang="en">VerificationInput</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://fusion.cs.uni-jena.de/fusion/repr/#Version -->
+
+    <owl:Class rdf:about="http://fusion.cs.uni-jena.de/fusion/repr/#Version">
+        <rdfs:subClassOf rdf:resource="http://fusion.cs.uni-jena.de/fusion/repr/#Setting"/>
     </owl:Class>
     
 
